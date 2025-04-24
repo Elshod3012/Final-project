@@ -12,7 +12,6 @@ const char MISS = 'O';
 struct Player {
     string name;
     char board[SIZE][SIZE];
-    char guesses[SIZE][SIZE];
 };
 
 void initializeBoard(char board[SIZE][SIZE]) {
@@ -121,9 +120,7 @@ int main() {
     cin >> player2.name;
 
     initializeBoard(player1.board);
-    initializeBoard(player1.guesses);
     initializeBoard(player2.board);
-    initializeBoard(player2.guesses);
 
     placeShips(player1);
     placeShips(player2);
