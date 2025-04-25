@@ -15,19 +15,19 @@ struct Player {
 };
 
 void initializeBoard(char board[SIZE][SIZE]) {
-    for (int i = 1; i < SIZE; ++i)
-        for (int j = 1; j < SIZE; ++j)
+    for (int i = 1; i < SIZE; i++)
+        for (int j = 1; j < SIZE; j++)
             board[i][j] = WATER;
 }
 
 void printBoard(const char board[SIZE][SIZE], bool hideShips = false) {
     cout << "  ";
-    for (int j = 1; j < SIZE; ++j) cout << j << " ";
+    for (int j = 1; j < SIZE; j++) cout << j << " ";
     cout << endl;
 
-    for (int i = 1; i < SIZE; ++i) {
+    for (int i = 1; i < SIZE; i++) {
         cout << char('A' + i - 1) << " ";
-        for (int j = 1; j < SIZE; ++j) {
+        for (int j = 1; j < SIZE; j++) {
             if (hideShips && board[i][j] == SHIP)
                 cout << WATER << " ";
             else
@@ -44,12 +44,12 @@ int getRowFromChar(char c) {
     return -1;
 }
 
-void placeShips(Player& player, int shipCount = 3) {
+void placeShips(Player& player, int shipCount = 5) {
     cout << player.name << ", place your " << shipCount << " ships." << endl;
     char rowChar;
     int col;
 
-    for (int i = 0; i < shipCount; ++i) {
+    for (int i = 0; i < shipCount; i++) {
         while (true) {
             cout << "Enter coordinates for ship " << (i + 1) << " (e.g. B 3): ";
             cin >> rowChar >> col;
@@ -99,8 +99,8 @@ bool attack(Player& attacker, Player& defender) {
 }
 
 bool hasShipsLeft(const Player& player) {
-    for (int i = 1; i < SIZE; ++i)
-        for (int j = 1; j < SIZE; ++j)
+    for (int i = 1; i < SIZE; i++)
+        for (int j = 1; j < SIZE; j++)
             if (player.board[i][j] == SHIP)
                 return true;
     return false;
