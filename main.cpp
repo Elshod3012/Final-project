@@ -51,7 +51,7 @@ void placeShips(Player& player, int shipCount = 5) {
 
     for (int i = 0; i < shipCount; i++) {
         while (true) {
-            cout << "Enter coordinates for ship " << (i + 1) << " (e.g. B 3): ";
+            cout << "Enter coordinates for ship " << (i + 1) << " (example B 3): ";
             cin >> rowChar >> col;
 
 
