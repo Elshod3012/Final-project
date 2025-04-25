@@ -20,7 +20,7 @@ void initializeBoard(char board[SIZE][SIZE]) {
             board[i][j] = WATER;
 }
 
-void printBoard(const char board[SIZE][SIZE], bool hideShips = false) {
+void printBoard(const char board[SIZE][SIZE]) {
     cout << "  ";
     for (int j = 1; j < SIZE; j++) cout << j << " ";
     cout << endl;
@@ -132,7 +132,7 @@ int main() {
         cout << "\n" << current->name << "'s turn.\n";
 
         cout << opponent->name << "'s board:\n";
-        printBoard(opponent->board, true);
+        printBoard(opponent->board);
 
         if (!attack(*current, *opponent))
             continue;
