@@ -111,7 +111,7 @@ int main() {
     cout<<"WELCOME TO 'SEA BATTLE' GAME, COMMANDER!"
           "\nRules:"
           "\nGrid size: 5x5 (Rows A–E, Columns 1–5)."
-          "\nEach player places 3 ships (1 cell each)."
+          "\nEach player places 5 ships (1 cell each)."
           "\nTake turns guessing coordinates (e.g., B 3).\nHit = X, Miss = O."
           "\nFirst to sink all enemy ships wins."<<endl;
     cout << "Enter name for Player 1: ";
