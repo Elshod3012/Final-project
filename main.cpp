@@ -28,7 +28,7 @@ void printBoard(const char board[SIZE][SIZE]) {
     for (int i = 1; i < SIZE; i++) {
         cout << char('A' + i - 1) << " ";
         for (int j = 1; j < SIZE; j++) {
-            if (hideShips && board[i][j] == SHIP)
+            if (board[i][j] == SHIP)
                 cout << WATER << " ";
             else
                 cout << board[i][j] << " ";
